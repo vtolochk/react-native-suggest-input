@@ -3,7 +3,7 @@ import { LayoutAnimation, LayoutAnimationConfig } from "react-native";
 
 // const COLLAPSE_ANIMATION: IAnimation = {
 const COLLAPSE_ANIMATION = {
-  duration: 300,
+  duration: 200,
   create: {
     type: LayoutAnimation.Types.linear,
     property: LayoutAnimation.Properties.opacity,

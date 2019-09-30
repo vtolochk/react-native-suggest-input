@@ -6,6 +6,7 @@ import {
   ViewStyle,
   TextInput,
   StyleSheet,
+  UIManager,
 } from "react-native";
 
 import DEVICE from "../helpers/device";
@@ -14,10 +15,6 @@ import animate from "../helpers/animation";
 import SuggestInputProps from "../interfaces/component";
 
 import suggestInputStyle from "./styles";
-
-// height for textInput is required
-// or just set default
-// ListEmptyComponent
 
 class SuggestInput extends React.PureComponent<SuggestInputProps> {
   
@@ -53,7 +50,6 @@ class SuggestInput extends React.PureComponent<SuggestInputProps> {
       containerStyle,
     } = this.props;
 
-    console.log("props =>", this.props);
     const isSuggestions: boolean = this.isSuggestions() && !hideResults; 
 
     const listStyle: ViewStyle = StyleSheet.flatten([
