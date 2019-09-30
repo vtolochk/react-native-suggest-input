@@ -9,11 +9,9 @@
     "test": "jest",
     "lint": "tslint ."
   },
-  "dependencies": {
-    "react": "16.9.0",
-    "react-native": "0.61.1"
-  },
   "devDependencies": {
+    "react": "16.9.0",
+    "react-native": "0.61.1",
     "@types/jest": "^24.0.18",
     "@types/react": "^16.9.3",
     "@types/react-native": "^0.60.17",
