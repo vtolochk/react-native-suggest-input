@@ -13,6 +13,8 @@ interface SuggestInputProps {
   textInputProps: SuggestTextInput;
   flatListProps?: Partial<FlatListProps<any>>;
   animationProps?: LayoutAnimationConfig;
+  leftView?: any;
+  rightView?: any;
 }
 
 export default SuggestInputProps;

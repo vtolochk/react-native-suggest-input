@@ -6,7 +6,6 @@ import {
   ViewStyle,
   TextInput,
   StyleSheet,
-  UIManager,
 } from "react-native";
 
 import DEVICE from "../helpers/device";
@@ -44,6 +43,8 @@ class SuggestInput extends React.PureComponent<SuggestInputProps> {
       hideResults,
       suggestions,
       renderItem,
+      leftView,
+      rightView,
       flatListStyle,
       flatListProps,
       textInputProps,
@@ -66,6 +67,7 @@ class SuggestInput extends React.PureComponent<SuggestInputProps> {
 
     return (
       <View style={viewStyle}>
+        {rightView}
         <TextInput {...textInputProps} />
         {isSuggestions && (
           <FlatList
@@ -76,10 +78,10 @@ class SuggestInput extends React.PureComponent<SuggestInputProps> {
             {...flatListProps}
           />
         )}
+        {leftView}
       </View>
     );
   }
 }
-
 
 export default SuggestInput;
