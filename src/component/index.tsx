@@ -48,6 +48,7 @@ class SuggestInput extends React.PureComponent<SuggestInputProps> {
       flatListStyle,
       flatListProps,
       textInputProps,
+      containerProps,
       containerStyle,
     } = this.props;
 
@@ -66,7 +67,7 @@ class SuggestInput extends React.PureComponent<SuggestInputProps> {
     ]);
 
     return (
-      <View style={viewStyle}>
+      <View style={viewStyle} {...containerProps}>
         {rightView}
         <TextInput {...textInputProps} />
         {isSuggestions && (

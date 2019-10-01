@@ -4,7 +4,8 @@ import {
   ListRenderItem,
   FlatListProps,
   LayoutAnimationConfig,
-  RegisteredStyle
+  RegisteredStyle,
+  ViewProps
 } from "react-native";
 
 interface SuggestTextInput extends Partial<TextInputProps> {
@@ -18,6 +19,7 @@ interface SuggestInputProps {
   containerStyle?: RegisteredStyle<any>;
   renderItem: ListRenderItem<any>;
   textInputProps: SuggestTextInput;
+  containerProps: ViewProps;
   flatListProps?: Partial<FlatListProps<any>>;
   animationProps?: LayoutAnimationConfig;
   leftView?: any;
