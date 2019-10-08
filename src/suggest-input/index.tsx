@@ -11,7 +11,7 @@ import {
 import DEVICE from "../helpers/device";
 import animate from "../helpers/animation";
 
-import SuggestInputProps from "../interfaces/component";
+import SuggestInputProps from "../interfaces/suggest-input";
 
 import suggestInputStyle from "./styles";
 
@@ -68,7 +68,7 @@ class SuggestInput extends React.PureComponent<SuggestInputProps> {
 
     return (
       <View style={viewStyle} {...containerProps}>
-        {rightView}
+        {leftView}
         <TextInput {...textInputProps} />
         {isSuggestions && (
           <FlatList
@@ -79,7 +79,7 @@ class SuggestInput extends React.PureComponent<SuggestInputProps> {
             {...flatListProps}
           />
         )}
-        {leftView}
+        {rightView}
       </View>
     );
   }

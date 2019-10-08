@@ -9,49 +9,50 @@ import {
 
 import SuggestInput from "react-native-suggest-input";
 
-const sugg = [
-  "some suggestion",
-  "another one",
-  "come on",
-  "ahahaafdfdsfdsfsdfdsfsdfsfdsfsfdsfsfsfshtheend",
-  "a",
-  "aaaa",
-  "AAAAA",
-  "ahahaah",
-  "a",
-  "aaaa",
-  "AAAAA",
-  "ahahaah",
-  "a",
-  "aaaa",
-  "AAAAA",
-  "ahahaah",
-  "a",
-  "aaaa",
-  "AAAAA",
-  "ahahaah",
-  "a",
-  "aaaa",
-  "AAAAA",
-  "ahahaah",
-  "a",
-  "aaaa",
-  "AAAAA",
-  "ahahaah",
-  "a",
-  "aaaa",
-  "AAAAA",
-  "ahahaah",
-  "hello",
-  "TATA",
-  "this",
-  "is",
-  "suggestions",
-  "lala",
-  "ZAZA",
-  "zaza",
-  "z",
-  "h",
+const suggestions = [
+  "long long long long long long long long long long long long long long long long suggestion",
+  "London",
+  "Kiev",
+  "Moscow",
+  "Madrid",
+  "Oslo",
+  "Agra",
+  "Aigaleo",
+  "Akashi",
+  "Abuja",
+  "New-York",
+  "Amsterdam",
+  "Berlin",
+  "Bristol",
+  "Paris",
+  "Perm",
+  "Rotterdam",
+  "Vienna",
+  "Zagreb",
+  "Rome",
+  "Milan",
+  "Seoul",
+  "Hong Kong",
+  "Santiago",
+  "Singapore",
+  "Florence",
+  "Venice",
+  "Barcelona",
+  "Copenhagen",
+  "Hamburg",
+  "Helsinki",
+  "Lisbon",
+  "Liverpool",
+  "Odessa",
+  "Porto",
+  "Sofia",
+  "Lakeland",
+  "Lakewood",
+  "Lamesa",
+  "Landover",
+  "Lansdale",
+  "Las Vegas",
+  "Volgograd"
 ];
 
 const App = () => {
@@ -78,15 +79,15 @@ const App = () => {
       paddingHorizontal: 2,
     },
   };
-  const sug = computeSuggestions(sugg);
+  const currentSuggestions = computeSuggestions(suggestions);
 
   return (
     <View style={styles.container}>
       <SuggestInput
         flatListStyle={{width: 200, maxHeight: 200, flex: 1}}
         textInputProps={textInputProps}
-        suggestions={sug}
-        hideResults={sug.length === 1 && sug[0] === value}
+        suggestions={currentSuggestions}
+        hideResults={currentSuggestions.length === 1 && currentSuggestions[0] === value}
         flatListProps={{
           keyboardShouldPersistTaps: "handled",
           ListEmptyComponent: <Text>Empty.....</Text>
@@ -108,11 +109,11 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: "red",
-    width: Dimensions.get("screen").width,
-    height: Dimensions.get("screen").height,
-    paddingTop: 200,
+    justifyContent: "flex-start",
     alignItems: "center",
+    paddingTop: 100,
   },
   exampleContainter: {
     marginTop: 25,
